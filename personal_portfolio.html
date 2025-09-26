@@ -1,0 +1,710 @@
+                <div class="about-text">
+                    <h2>關於我 💖</h2>
+                    <p>歡迎來到我的夢幻小世界！我是一位充滿少女心的創作者，專注於將粉紅色的浪漫與甜美融入每一個設計作品中。</p>
+                    <p>就像少女漫畫中的主角一樣，我相信每個作品都應該閃閃發光✨，充滿愛與夢想。我<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 192, 203, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 182, 193, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(255, 228, 225, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 192, 203, 0.2);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 182, 193, 0.3);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #d63384;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(255, 192, 203, 0.3);
+        }
+        
+        nav a:hover {
+            transform: translateY(-2px);
+            color: #b02a5b;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b9d, #ffc0cb);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #d63384;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '✨ 🌸 💕 ✨ 🌸 💕 ✨ 🌸 💕 ✨ 🌸 💕';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: sparkle 15s infinite linear;
+            pointer-events: none;
+            white-space: nowrap;
+            line-height: 4rem;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: slideInDown 1s ease;
+            text-shadow: 2px 2px 8px rgba(255, 192, 203, 0.6);
+            background: linear-gradient(45deg, #ff6b9d, #ffc0cb, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            animation: slideInUp 1s ease 0.3s both;
+            color: #b02a5b;
+            font-weight: 500;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #ff6b9d, #ffc0cb);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 3px solid rgba(255, 105, 180, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+        }
+        
+        .btn:hover {
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.4);
+            border-color: rgba(255, 20, 147, 0.5);
+        }
+        
+        .section {
+            padding: 5rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .about {
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 228, 225, 0.8));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .about::before {
+            content: '🌸';
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            font-size: 4rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .about::after {
+            content: '💖';
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            font-size: 3rem;
+            opacity: 0.1;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #d63384;
+            text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.3);
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #8b5a6b;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b9d, #ffc0cb, #ff69b4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 20px 40px rgba(255, 105, 180, 0.3),
+                inset 0 0 50px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .profile-image::before {
+            content: '✨';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 2rem;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+        
+        .profile-image::after {
+            content: '💕';
+            position: absolute;
+            bottom: -5px;
+            left: 15px;
+            font-size: 1.5rem;
+            animation: twinkle 2.5s ease-in-out infinite reverse;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 
+                0 25px 50px rgba(255, 105, 180, 0.4),
+                inset 0 0 60px rgba(255, 255, 255, 0.3);
+        }
+        
+        .portfolio {
+            background: linear-gradient(135deg, rgba(255, 228, 225, 0.6), rgba(255, 240, 245, 0.6));
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .portfolio::before {
+            content: '🎀 ✨ 🌸 💖 🎀 ✨ 🌸 💖';
+            position: absolute;
+            top: 0;
+            left: -20%;
+            width: 140%;
+            height: 100%;
+            font-size: 3rem;
+            opacity: 0.05;
+            animation: drift 25s infinite linear;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+        
+        @keyframes drift {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .portfolio h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #d63384;
+            text-shadow: 1px 1px 3px rgba(255, 192, 203, 0.3);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 192, 203, 0.3);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 25px 50px rgba(255, 105, 180, 0.3);
+            border-color: rgba(255, 105, 180, 0.5);
+        }
+        
+        .portfolio-item-image {
+            height: 200px;
+            background: linear-gradient(45deg, #ff6b9d, #ffc0cb, #ff69b4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-item-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            transition: left 0.5s;
+        }
+        
+        .portfolio-item:hover .portfolio-item-image::before {
+            left: 100%;
+        }
+        
+        .portfolio-item-content {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #d63384;
+            font-weight: 600;
+        }
+        
+        .portfolio-item p {
+            color: #8b5a6b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #ff6b9d 0%, #ffc0cb 50%, #ff69b4 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '💕 ✨ 🌸 💕 ✨ 🌸';
+            position: absolute;
+            top: -10%;
+            left: -50%;
+            width: 200%;
+            height: 120%;
+            font-size: 8rem;
+            opacity: 0.05;
+            animation: heartbeat 20s infinite ease-in-out;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(5deg); }
+            50% { transform: scale(1) rotate(0deg); }
+            75% { transform: scale(1.05) rotate(-3deg); }
+        }
+        
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1.5rem 2.5rem;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px) scale(1.05);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #d63384, #b02a5b);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '🌸';
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        footer::after {
+            content: '🌸';
+            position: absolute;
+            top: 50%;
+            right: 20%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於我</a></li>
+                <li><a href="#portfolio">作品集</a></li>
+                <li><a href="#contact">聯絡方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>您的姓名 ✨</h1>
+            <p>夢幻創作者 | 設計精靈 | 少女心藝術家 💕</p>
+            <a href="#portfolio" class="btn">查看作品</a>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>關於我</h2>
+                    <p>歡迎來到我的個人網站！我是一位充滿熱情的創作者，專注於結合美學與功能性的設計理念。</p>
+                    <p>擅長多種設計領域，包括網頁設計、平面設計、以及數位藝術創作。我相信每個專案都有其獨特的故事，而我的目標就是透過設計將這些故事完美呈現。</p>
+                    <p>持續學習新技術和設計趨勢，致力於創造令人印象深刻且實用的作品。</p>
+                </div>
+                <div>
+                    <div class="profile-image">
+                        👨‍💻
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2>我的作品集</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎨</div>
+                    <div class="portfolio-item-content">
+                        <h3>網頁設計專案</h3>
+                        <p>響應式網頁設計，結合現代美學與使用者體驗設計原則，創造出既美觀又實用的網站。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">📱</div>
+                    <div class="portfolio-item-content">
+                        <h3>移動應用程式</h3>
+                        <p>直觀易用的手機應用程式界面設計，注重用戶體驗和視覺層次的平衡。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🖼️</div>
+                    <div class="portfolio-item-content">
+                        <h3>品牌視覺設計</h3>
+                        <p>完整的品牌識別系統設計，包含標誌、色彩搭配、字體選擇等視覺元素。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">💻</div>
+                    <div class="portfolio-item-content">
+                        <h3>前端開發</h3>
+                        <p>使用現代前端技術打造互動性強、性能優異的網頁應用程式。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">🎯</div>
+                    <div class="portfolio-item-content">
+                        <h3>數位行銷素材</h3>
+                        <p>針對社群媒體和數位平台設計的視覺素材，提升品牌曝光度和互動率。</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-item-image">✨</div>
+                    <div class="portfolio-item-content">
+                        <h3>創意專案</h3>
+                        <p>個人創作和實驗性專案，探索新的設計理念和技術可能性。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2>聯絡我</h2>
+            <p>有任何合作機會或想法交流，歡迎與我聯繫</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>📧 電子郵件</strong><br>
+                    your.email@example.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱 電話</strong><br>
+                    +886 912 345 678
+                </div>
+                <div class="contact-item">
+                    <strong>🔗 LinkedIn</strong><br>
+                    linkedin.com/in/yourprofile
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 您的姓名. 版權所有.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // 滾動動畫
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // 導航列背景變化
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (currentScroll > 100) {
+                header.style.background = 'rgba(255, 240, 245, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.borderBottom = '1px solid rgba(255, 192, 203, 0.5)';
+                header.querySelectorAll('a').forEach(link => {
+                    link.style.color = '#d63384';
+                });
+            } else {
+                header.style.background = 'rgba(255, 192, 203, 0.2)';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.borderBottom = '1px solid rgba(255, 182, 193, 0.3)';
+                header.querySelectorAll('a').forEach(link => {
+                    link.style.color = '#d63384';
+                });
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // 作品集項目點擊效果
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // 這裡可以添加點擊後的動作，比如開啟模態框顯示作品詳情
+                console.log('作品被點擊:', this.querySelector('h3').textContent);
+            });
+        });
+    </script>
+</body>
+</html>
